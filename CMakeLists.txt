@@ -6,4 +6,11 @@ project(unitTesting)
 add_subdirectory(src)
 add_subdirectory(app)
 
-add_subdirectory(test)
+set(BUILD_TEST ON)
+
+if(BUILD_TEST)
+	message("Building Test")
+	add_subdirectory(test)
+elseif()
+	message("Test Disabled")
+endif()
