@@ -6,14 +6,14 @@ TEST(StudentTest, TestRollNo)
 {
 	student s;
 	s.set_roll_no("A002");
-	EXPECT_EQ("A002", s.get_roll_no());
+	EXPECT_EQ("A003", s.get_roll_no()); // intentionally failing
 }
 
 TEST(StudentTest, TestAge)
 {
 	student s;
 	s.set_age(22);
-	EXPECT_EQ(22, s.get_age());
+	EXPECT_EQ(25, s.get_age()); // intentionally failing
 }
 
 TEST(WhitelistTest, TestAddToWhitelist)
@@ -25,7 +25,7 @@ TEST(WhitelistTest, TestAddToWhitelist)
 
 	w.addToWhitelist("Bob", s);
 
-	EXPECT_TRUE(w.isStudentPresent("Bob"));
+	EXPECT_TRUE(w.isStudentPresent("Alice")); // intentionally failing
 }
 
 TEST(WhitelistTest, TestGetStudentData)
@@ -39,6 +39,6 @@ TEST(WhitelistTest, TestGetStudentData)
 
 	student *ptr = w.getStudentData("Bob");
 
-	EXPECT_EQ("A002", ptr->get_roll_no());
-	EXPECT_EQ(22, ptr->get_age());
+	EXPECT_EQ("A012", ptr->get_roll_no()); // intentionally failing
+	EXPECT_EQ(27, ptr->get_age());		   // intentionally failing
 }
