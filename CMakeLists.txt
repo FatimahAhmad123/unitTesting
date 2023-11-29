@@ -6,7 +6,7 @@ project(unitTesting)
 add_subdirectory(src)
 add_subdirectory(app)
 
-set(BUILD_TEST ON)
+option(BUILD_TEST "Builds the tests." ON)
 
 if(BUILD_TEST)
 	message("Building Test")
