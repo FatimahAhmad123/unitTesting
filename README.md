@@ -22,7 +22,7 @@ This project is designed for unit testing basic functions of student.cpp and whi
 
 1. Clone the repository:
 ```
-git clone <repository-url>
+git clone https://github.com/FatimahAhmad123/unitTesting.git
 ```
 2. Run the following commands:
 ```
